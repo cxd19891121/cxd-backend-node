@@ -5,6 +5,7 @@ pg.defaults.ssl = true;
 
 var pool = new pg.Pool(dbConfig);
 
+
 module.exports = pool;
 
 

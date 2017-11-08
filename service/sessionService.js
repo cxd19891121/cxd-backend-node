@@ -5,26 +5,68 @@
     Description: Service File for session
 */
 
+
+/**
+ * Created by xiaodong chen on 12/21/2016.
+ */
+
+
+module.exports = session;
+
 var userModel = require('./../model/userModel');
+
+
+
 
 var sessionService = (function sessionService() {
 
         var sessionAPI = {
+            storeSession: storeSession,
+            clearSession: clearSession,
+            checkOperationAuth: checkOperationAuth,
+        }
 
-            getAuthObj : getAuthObj,
-            clearSession : clearSession,
-            registerSession : registerSession,
-            checkAuth: checkAuth,
+        /*
+        * TODO
+        * @functionName storeSession
+        * @description store the user information into session.
+        * @param1  req {object}
+        * @param2   username {string}
+        * @returns void
+        */
+        function storeSession(req, username){
 
         }
 
+        /*
+        * TODO
+        * @functionName clearSession
+        * @description clear the session for user
+        * @param   req {object}
+        * @returns void
+        */
         function clearSession(req){
-            req.session = null;
+
         }
 
-        function registerSession(req,username){
-            req.session.user = username;
+        /*
+        * TODO
+        * @functionName checkOperationAuth
+        * @description check user's authority for specific operation
+        * @param   operationTagName {String}
+        * @returns function
+        */
+        function checkOperationAuth(operationTagName){
+            return function(req,res,next){
+
+            }
+
         }
+
+
+
+
+
 
         return sessionAPI;
 

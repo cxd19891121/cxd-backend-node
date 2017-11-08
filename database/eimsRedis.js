@@ -18,4 +18,4 @@ client.on('error',function(e){
 
 
 
-//module.exports = client;
+module.exports = client;

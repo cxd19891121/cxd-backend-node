@@ -7,8 +7,6 @@ var CONFIG = {
 
     REDIS: {
         client: "redis://redistogo:3d6a66cf0013274281729241e0b3d59b@crestfish.redistogo.com:11319",
-        herokuClient: "",
-        anotherClient:"redis://h:pe9f1ih365dtc5ajp0pha3i12c7@ec2-50-19-83-130.compute-1.amazonaws.com:9119",
     },
 
     MONGODB: {

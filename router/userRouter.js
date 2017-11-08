@@ -8,19 +8,18 @@ var express = require('express'),
 
 route
     .route('/')
-    .get  (service.getAllUser)
-    .post (service.addUser);
+    .get  (service.getAll)
+    .post (service.addOne);
 
 route
     .route ('/userId/:id')
-    .get   (service.getUserById)
-    .put   (service.updateUserById)
-    .delete(service.deleteUserById);
+    .get   (service.getById)
+    .put   (service.changeById)
+    .delete(service.removeById);
 
 
 route
-    .get('/first',service.getFirstUser)
-    .get('/last', service.getLastUser)
-    .get('/username/:name',service.getUserByName)
+    .get('/first',service.getFirst)
+    .get('/last', service.getLast)
 
 module.exports = route;

@@ -4,8 +4,12 @@ var express = require('express'),
     app = express();
 
 //route module
-var appRouter = require('./router/router');
-    route = express.Router();
+var appRouter = require('./router/router'),
+    route = express.Router(),
+    session = require('./database/eimsSession');
+
+session
+    .start(app);
 
 route
     .use('/', appRouter)

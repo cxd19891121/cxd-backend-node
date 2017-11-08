@@ -5,7 +5,7 @@
     Description: Service file for 'order' table
 */
 
-var orderModel = require('./../model/orderId');
+var orderModel = require('./../model/orderModel');
 
 var orderService = (function orderService() {
 
