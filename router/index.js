@@ -8,6 +8,8 @@ index
     .get(userResponse)
     .post(userResponse);
 
+//TODO : setting auth check as middleware for every API
+
 index
     .route('/login')
     .post(loginService.login);

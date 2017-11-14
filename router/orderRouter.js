@@ -9,6 +9,8 @@ var express = require('express'),
     orderService = require('../service/orderService'),
     orderRouter = express.Router();
 
+//TODO : setting auth check as middleware for every API
+
 orderRouter
     .route('/')
     .get(orderService.getAll)

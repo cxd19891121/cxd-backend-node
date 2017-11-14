@@ -2,36 +2,12 @@
  * Created by xiaodong chen on 12/20/2016.
  */
 
-
-var CONFIG = {
-
-    REDIS: {
-        client: "redis://redistogo:3d6a66cf0013274281729241e0b3d59b@crestfish.redistogo.com:11319",
-    },
-
-    MONGODB: {
-        url: "mongodb://admin:admin@ds041566.mlab.com:41566/heroku_v4dcjtn0"
-    },
-
-    SESSION: {
-        secret: "faeb4453e5d14fe6f6d04637f78077c76c73d1b4",
-        proxy: true,
-        resave: true,
-        saveUninitialized: true,
-        maxAge: 3600000,
-    },
-
-    POSTGRE_DB: {
-        host: "ec2-54-243-249-149.compute-1.amazonaws.com",
-        user: "wxrfbtguomaqwx",
-        database: "d92s1tko8rccnl",
-        password: "tn6TNUUYiBrrGDP7-pZNCbPvQg",
-        port: 5432,
-        max: 10,
-        idleTimeoutMillis: 30000
-    }
-
-}
+var configDriver = require('./../config/configDriver');
 
 
-module.exports = CONFIG;
+var config = configDriver.getConfigObj();
+console.log(config);
+
+
+
+module.exports = config;

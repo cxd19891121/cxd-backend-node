@@ -9,6 +9,8 @@ var express = require('express'),
     visaService = require('../service/visaService'),
     visaRouter = express.Router();
 
+//TODO : setting auth check as middleware for every API
+
 visaRouter
     .route('/')
     .get(visaService.getAll)

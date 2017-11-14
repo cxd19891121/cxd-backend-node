@@ -9,6 +9,8 @@ var express = require('express'),
     eduService = require('../service/eduService'),
     eduRouter = express.Router();
 
+//TODO : setting auth check as middleware for every API
+
 eduRouter
     .route('/')
     .get(eduService.getAll)

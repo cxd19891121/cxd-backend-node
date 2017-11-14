@@ -12,9 +12,14 @@ var express = require('express'),
     visa    = require('./visaRouter'),
     edu     = require('./eduRouter'),
     order   = require('./orderRouter'),
+    message = require('./messageRoute'),
     router  = express.Router();
 
+//TODO: add forget route for forgetRouter
 
+//TODO: add search route for searchRouter
+
+//TODO: add form route for formRouter
 router
     .all('*',corsHandler)
     .use('/',index)
@@ -23,6 +28,7 @@ router
     .use('/visa',visa)
     .use('/edu',edu)
     .use('/order',order)
+    .use('/message',message)
 
 
 

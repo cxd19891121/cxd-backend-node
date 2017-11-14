@@ -3,7 +3,7 @@
     "baseUrl": "192.168.1.86",
     "port": 3000
   },
-  "database": {
+  "POSTGRE_DB": {
     "host": "ec2-54-243-249-149.compute-1.amazonaws.com",
     "user": "wxrfbtguomaqwx",
     "database": "d92s1tko8rccnl",
@@ -12,11 +12,11 @@
     "max": 10,
     "idleTimeoutMillis": 30000
   },
-  "redis": {
-    "client": "redis://192.168.1.86:6379",
+  "REDIS": {
+    "client": "redis://redistogo:3d6a66cf0013274281729241e0b3d59b@crestfish.redistogo.com:11319",
     "comment": "redis://h:pe9f1ih365dtc5ajp0pha3i12c7@ec2-50-19-83-130.compute-1.amazonaws.com:9119"
   },
-  "session": {
+  "SESSION": {
     "secret": "faeb4453e5d14fe6f6d04637f78077c76c73d1b4",
     "proxy": true,
     "resave": true,

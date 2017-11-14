@@ -9,6 +9,8 @@ var express = require('express'),
     workService = require('../service/workService'),
     workRouter = express.Router();
 
+//TODO : setting auth check as middleware for every API
+
 workRouter
     .route('/')
     .get(workService.getAll)
